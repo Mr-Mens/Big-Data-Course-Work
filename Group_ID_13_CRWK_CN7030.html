@@ -14585,7 +14585,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li>Student 2: Mohamed Jareer MOHAMED  ZEENAM 2596353</li>
 </ol>
 <hr>
-<p>If you want to add comments on your group work, please write it here for us:</p>
 <p>Access the Git repository for our coursework at the following link: <a href="https://github.com/Mr-Mens/Big-Data-Course-Work">Big-Data-Course-Work</a></p>
 
 </div>
@@ -14681,7 +14680,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Identify the student who made a contribution and mention their name in the appropriate section of the code.</span>
 
-<span class="c1">## Philip Acquaye-Mensah</span>
+<span class="c1"># Philip Acquaye-Mensah</span>
 
 <span class="c1"># Load the compressed file as a text file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">"CourseWork_Dataset_Machine_Learning.csv"</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -15819,7 +15818,8 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Flow_Byts_s_imputed'</span><span class="p">,</span> <span class="s1">'Flow_Pkts_per_s'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop the original columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Flow_Byts_s_imputed'</span><span class="p">,</span> <span class="s1">'Flow_Pkts_per_s'</span><span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -17702,7 +17702,7 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># install nbconvert (if facing the conversion error)</span>
-<span class="c1"># !pip3 install nbconvert</span>
+<span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>nbconvert
 </pre></div>
 
      </div>
@@ -17715,7 +17715,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert ipynb to html and submit this HTML file</span>

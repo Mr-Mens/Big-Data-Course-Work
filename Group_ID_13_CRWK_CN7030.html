@@ -14681,6 +14681,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Identify the student who made a contribution and mention their name in the appropriate section of the code.</span>
 
 <span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
 
 <span class="c1"># Load the compressed file as a text file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">"CourseWork_Dataset_Machine_Learning.csv"</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -14798,7 +14799,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="n">FloatType</span>
 
 <span class="c1"># Exclude 'Label' column from casting</span>
@@ -14822,7 +14826,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check Multi class label</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Check Multi class label</span>
 <span class="c1"># Label is the column named Label</span>
 <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"Label"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
@@ -14881,7 +14888,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">col</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">col</span>
 
 <span class="c1"># Convert "Label" into a binary classification where "Benign" is 0 and any attack is 1</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Label_binary"</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Label"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Benign"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
@@ -14944,7 +14954,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop Label column because of new binary label and Timestamp column</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Drop Label column because of new binary label and Timestamp column</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"Label"</span><span class="p">,</span><span class="s2">"Timestamp"</span><span class="p">)</span>
 
 <span class="c1"># Print the schema to see the data types and structure</span>
@@ -15124,7 +15137,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check for missing values in each column</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Check for missing values in each column</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">isnan</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">col</span>
 <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">count</span><span class="p">(</span><span class="n">when</span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">|</span> <span class="n">col</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">(),</span> <span class="n">c</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15181,7 +15197,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="n">FloatType</span>
 
 
@@ -15375,7 +15394,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">isnan</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">isnan</span>
  
 <span class="c1"># Iterate through each column in the DataFrame</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -15732,7 +15754,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">col</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">col</span>
 
 <span class="c1"># List of columns to replace Infinity values with NaN</span>
 <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Flow_Byts_s_imputed"</span><span class="p">,</span> <span class="s2">"Flow_Pkts_per_s"</span><span class="p">]</span>
@@ -15818,7 +15843,10 @@ only showing top 20 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop the original columns</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Drop the original columns</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Flow_Byts_s_imputed'</span><span class="p">,</span> <span class="s1">'Flow_Pkts_per_s'</span><span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -15931,7 +15959,10 @@ only showing top 10 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># VectorAssembler and the rest of the pipeline</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># VectorAssembler and the rest of the pipeline</span>
 <span class="kn">from</span> <span class="nn">pyspark.ml.feature</span> <span class="kn">import</span> <span class="n">VectorAssembler</span>
 
 <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Label_binary'</span><span class="p">]]</span>  <span class="c1"># Exclude the target column</span>
@@ -16101,7 +16132,10 @@ only showing top 10 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the values from Sparse Vectors to the list format</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Extract the values from Sparse Vectors to the list format</span>
 <span class="n">data_select</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'features'</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">data_select</span><span class="p">:</span>
     <span class="n">dense_vector</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toArray</span><span class="p">()</span>
@@ -16194,7 +16228,10 @@ only showing top 10 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Normalizing feature vectors</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Normalizing feature vectors</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s2">"features"</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s2">"scaledFeatures"</span><span class="p">,</span> <span class="n">withStd</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">withMean</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">scaler_model</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">scaler_model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -16247,7 +16284,10 @@ only showing top 3 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into training and testing sets</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Split the data into training and testing sets</span>
 <span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 
 <span class="n">train_data</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
@@ -16349,7 +16389,10 @@ only showing top 2 rows
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#! Double check for any Negative, Infinity or NaN values</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1">#! Double check for any Negative, Infinity or NaN values</span>
 
 <span class="c1"># Iterate through each column in the DataFrame</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -16721,7 +16764,10 @@ Area Under PR =  99.973
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Common Evaluation Metrics for Binary Classification</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Philip Acquaye-Mensah</span>
+<span class="c1"># Mohamed Jareer MOHAMED  ZEENAM</span>
+
+<span class="c1"># Common Evaluation Metrics for Binary Classification</span>
 
 <span class="kn">from</span> <span class="nn">pyspark.ml.evaluation</span> <span class="kn">import</span> <span class="n">BinaryClassificationEvaluator</span>
 
@@ -17715,7 +17761,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert ipynb to html and submit this HTML file</span>
